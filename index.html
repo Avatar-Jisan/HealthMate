@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HealthMate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <header>
+        <div class="logo">
+            <img src="https://img.icons8.com/emoji/48/health-worker-light.png" alt="Logo">
+            <div class="logo-text">HealthMate</div>
+        </div>
+    </header>
+
+    <!-- Main Cards -->
+    <div class="container">
+        <!-- BMI Calculator -->
+        <!-- BMI Calculator (Updated) -->
+        <div class="card">
+            <div id="bmi">
+            <h2>🧮 BMI Calculator</h2>
+
+            <!-- Height Section -->
+            <label>Height Unit:</label>
+            <select class="height-unit">
+                <option value="cm">CM</option>
+                <option value="ftin">Feet + Inch</option>
+            </select>
+
+            <div class="height-cm-input">
+                <input type="number" placeholder="Height (cm)" class="height-cm">
+            </div>
+
+            <div class="height-ftin-input" style="display: none;">
+                <input type="number" placeholder="Feet" class="height-ft">
+                <input type="number" placeholder="Inches" class="height-in">
+            </div>
+            <p class="height-m"></p>
+
+            <!-- Weight Section -->
+            <label for="weight-unit">Weight Unit:</label>
+            <select class="weight-unit">
+                <option value="kg">KG</option>
+                <option value="lb">LB</option>
+            </select>
+
+            <div id="weight-in">
+                <input type="number" placeholder="Weight (kg)" class="weight-kg-in">
+            </div>
+            <!--BMI calculation-->
+            <button id="bmi-btn">Calculate BMI</button>
+            <p id="bmi-result"></p>
+            <p id="bmi-category"></p>
+        </div>
+        </div>
+
+        <!-- Calorie Need -->
+        <div class="card">
+            <h2>🔥 Calorie Needs</h2>
+            <input type="number" placeholder="Age" id="cal-age">
+            <select id="cal-gender">
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <!-- Weight Section -->
+            <label for="weight-unit">Weight Unit:</label>
+            <select class="weight-unit">
+                <option value="kg">KG</option>
+                <option value="lb">LB</option>
+            </select>
+
+            <div>
+                <input type="number" placeholder="Weight (kg)" class="weight-kg-in">
+            </div>
+            <!-- Height Section -->
+            <label>Height Unit:</label>
+            <select class="height-unit">
+                <option value="cm">CM</option>
+                <option value="ftin">Foot + Inch</option>
+            </select>
+
+            <div class="height-cm-input">
+                <input type="number" placeholder="Height (cm)" class="height-cm">
+            </div>
+
+            <div class="height-ftin-input" style="display: none;">
+                <input type="number" placeholder="Feet" class="height-ft">
+                <input type="number" placeholder="Inches" class="height-in">
+            </div>
+            <select id="cal-activity">
+                <option value="">Activity Level</option>
+                <option value="1.2">Sedentary</option>
+                <option value="1.375">Lightly Active</option>
+                <option value="1.55">Moderately Active</option>
+                <option value="1.725">Very Active</option>
+                <option value="1.9">Super Active</option>
+            </select>
+            <button id="cal-btn">Calculate Calories</button>
+            <p id="cal-result"></p>
+        </div>
+
+        <!-- Food Tracker -->
+        <div class="card">
+            <h2>🍽️ Food Tracker</h2>
+            <input type="text" placeholder="Food Name" id="food-name">
+            <input type="number" placeholder="Calories (kcal)" id="food-cal">
+            <button id="add-food">Add Food</button>
+            <ul id="food-list"></ul>
+            <p>Total Calories: <span id="total-calories">0</span> kcal</p>
+            <button id="clear-foods" style="background-color: #f44336;">Clear All</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
