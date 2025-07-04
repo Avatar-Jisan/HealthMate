@@ -26,86 +26,88 @@
         <!-- BMI Calculator (Updated) -->
         <div class="card">
             <div id="bmi">
-            <h2>🧮 BMI Calculator</h2>
+                <h2>🧮 BMI Calculator</h2>
 
-            <!-- Height Section -->
-            <label>Height Unit:</label>
-            <select class="height-unit">
-                <option value="cm">CM</option>
-                <option value="ftin">Feet + Inch</option>
-            </select>
+                <!-- Height Section -->
+                <label>Height Unit:</label>
+                <select class="height-unit">
+                    <option value="cm">CM</option>
+                    <option value="ftin">Feet + Inch</option>
+                </select>
 
-            <div class="height-cm-input">
-                <input type="number" placeholder="Height (cm)" class="height-cm">
+                <div class="height-cm-input">
+                    <input type="number" placeholder="Height (cm)" class="height-cm">
+                </div>
+
+                <div class="height-ftin-input" style="display: none;">
+                    <input type="number" placeholder="Feet" class="height-ft">
+                    <input type="number" placeholder="Inches" class="height-in">
+                </div>
+                <p class="height-m"></p>
+
+                <!-- Weight Section -->
+                <label for="weight-unit">Weight Unit:</label>
+                <select class="weight-unit">
+                    <option value="kg">KG</option>
+                    <option value="lb">LB</option>
+                </select>
+
+                <div id="weight-in">
+                    <input type="number" placeholder="Weight (kg)" class="weight-kg-in">
+                </div>
+                <!--BMI calculation-->
+                <button id="bmi-btn">Calculate BMI</button>
+                <p id="bmi-result"></p>
+                <p id="bmi-category"></p>
             </div>
-
-            <div class="height-ftin-input" style="display: none;">
-                <input type="number" placeholder="Feet" class="height-ft">
-                <input type="number" placeholder="Inches" class="height-in">
-            </div>
-            <p class="height-m"></p>
-
-            <!-- Weight Section -->
-            <label for="weight-unit">Weight Unit:</label>
-            <select class="weight-unit">
-                <option value="kg">KG</option>
-                <option value="lb">LB</option>
-            </select>
-
-            <div id="weight-in">
-                <input type="number" placeholder="Weight (kg)" class="weight-kg-in">
-            </div>
-            <!--BMI calculation-->
-            <button id="bmi-btn">Calculate BMI</button>
-            <p id="bmi-result"></p>
-            <p id="bmi-category"></p>
-        </div>
         </div>
 
         <!-- Calorie Need -->
         <div class="card">
-            <h2>🔥 Calorie Needs</h2>
-            <input type="number" placeholder="Age" id="cal-age">
-            <select id="cal-gender">
-                <option value="">Select Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-            </select>
-            <!-- Weight Section -->
-            <label for="weight-unit">Weight Unit:</label>
-            <select class="weight-unit">
-                <option value="kg">KG</option>
-                <option value="lb">LB</option>
-            </select>
+            <div id="calorie">
+                <h2>🔥 Calorie Needs</h2>
+                <input type="number" placeholder="Age" id="cal-age">
+                <select id="cal-gender">
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <!-- Weight Section -->
+                <label for="weight-unit">Weight Unit:</label>
+                <select class="weight-unit">
+                    <option value="kg">KG</option>
+                    <option value="lb">LB</option>
+                </select>
 
-            <div>
-                <input type="number" placeholder="Weight (kg)" class="weight-kg-in">
-            </div>
-            <!-- Height Section -->
-            <label>Height Unit:</label>
-            <select class="height-unit">
-                <option value="cm">CM</option>
-                <option value="ftin">Foot + Inch</option>
-            </select>
+                <div>
+                    <input type="number" placeholder="Weight (kg)" class="weight-kg-in">
+                </div>
+                <!-- Height Section -->
+                <label>Height Unit:</label>
+                <select class="height-unit">
+                    <option value="cm">CM</option>
+                    <option value="ftin">Feet + Inch</option>
+                </select>
 
-            <div class="height-cm-input">
-                <input type="number" placeholder="Height (cm)" class="height-cm">
-            </div>
+                <div class="height-cm-input">
+                    <input type="number" placeholder="Height (cm)" class="height-cm">
+                </div>
 
-            <div class="height-ftin-input" style="display: none;">
-                <input type="number" placeholder="Feet" class="height-ft">
-                <input type="number" placeholder="Inches" class="height-in">
+                <div class="height-ftin-input" style="display: none;">
+                    <input type="number" placeholder="Feet" class="height-ft">
+                    <input type="number" placeholder="Inches" class="height-in">
+                </div>
+                <select id="cal-activity">
+                    <option value="">Activity Level</option>
+                    <option value="1.2">Sedentary</option>
+                    <option value="1.375">Lightly Active</option>
+                    <option value="1.55">Moderately Active</option>
+                    <option value="1.725">Very Active</option>
+                    <option value="1.9">Super Active</option>
+                </select>
+                <button id="cal-btn">Calculate Calories</button>
+                <p id="cal-result"></p>
             </div>
-            <select id="cal-activity">
-                <option value="">Activity Level</option>
-                <option value="1.2">Sedentary</option>
-                <option value="1.375">Lightly Active</option>
-                <option value="1.55">Moderately Active</option>
-                <option value="1.725">Very Active</option>
-                <option value="1.9">Super Active</option>
-            </select>
-            <button id="cal-btn">Calculate Calories</button>
-            <p id="cal-result"></p>
         </div>
 
         <!-- Food Tracker -->
