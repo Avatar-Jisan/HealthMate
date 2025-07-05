@@ -4,7 +4,6 @@ const bmi = document.getElementById("bmi");
 const calorie = document.getElementById("calorie");
 const calBtn = document.getElementById("cal-btn");
 
-
 bmiBtn.addEventListener("click", function () {
   bmiResult.textContent = "Result: ";
   const weightIn = document.getElementById("weight-in");
@@ -31,7 +30,7 @@ bmiBtn.addEventListener("click", function () {
   }
   let ogResult = weight / (height * height);
   let result = ogResult.toFixed(2);
-  console.log(result);
+  
   heightM.textContent = "Height in Meter: " + height.toFixed(2);
   bmiResult.textContent += result;
   if (result >= 40.0) {
@@ -80,20 +79,31 @@ calBtn.addEventListener("click", function () {
     height = parseFloat(HeightFtInput.value * 0.3048);
     height += parseFloat(HeightInchInput.value * 0.0254);
   }
-  const age = document.getElementById("cal-age").value
-  const gender = document.getElementById("cal-gender")
-  let BMR,result,ogResult;
-  if(gender.value==="male"){
-   BMR = 10 * weight + 625 * height - 5 * age + 5
+  const ageInput = document.getElementById("cal-age");
+  let age = ageInput.value
+  
+  let gender = document.getElementById("cal-gender");
+  let BMR, result, ogResult;
+  if (gender.value === "male") {
+    BMR = 10 * weight + 625 * height - 5 * age + 5;
+  } else if (gender.value === "female") {
+    BMR = 10 * weight + 625 * height(m) - 5 * age - 161;
   }
-  else if ( gender.value === "female"){
-    BMR = 10 * weight + 625 * height(m) - 5 * age - 161
-  }
-  const activity = document.getElementById("cal-activity").value
-  ogResult = BMR * activity 
-  result = ogResult.toFixed(2)
-  const calorieREsult = document.getElementById("cal-result")
-  calorieREsult.textContent = "Daily Calorie Needs: "+ result + "kcal"
+  const activity = document.getElementById("cal-activity").value;
+  ogResult = BMR * activity;
+  result = ogResult.toFixed(0);
+  const calorieREsult = document.getElementById("cal-result");
+  calorieREsult.textContent = "Daily Calorie Needs: " + result + " " + "kcal";
+// ✅ Reset after calculation
+ageInput.value = "";             
+gender.value = "";               
+weightInput.value = "";         
+HeightFtInput.value = "";        
+HeightInchInput.value = "";      
+HeightCm.value = "";             
+        
+document.getElementById("cal-activity").value = "";
+
 });
 
 document.querySelectorAll(".height-unit").forEach((select) => {
